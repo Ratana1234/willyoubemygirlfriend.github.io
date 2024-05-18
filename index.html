@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you love me</title>
+    <link rel="icon" href="https://i.ibb.co/DCg2WWF/68-BB06-E5-BDF9-41-EB-83-C6-4609980-C92-FC.jpg">
+    <!-- <link rel="stylesheet" href="/wiilyouloveme/style.css">
+     -->
+     <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+img{
+    /* margin-left: 600px; */
+    display: block;
+    margin: auto;
+}
+h2{
+    text-align: center;
+    font-size: 3em;
+    color: pink;
+    margin: 15px 0;
+    margin-top: 40px;
+}
+.btn-group{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+button{
+    position: absolute;
+    width: 150px;
+    height: inherit;
+    color: white;
+    font-size: 1.2em;
+    background-color: palevioletred;
+    border: transparent;
+    border-radius: 30px;
+}
+button:nth-child(1){
+    margin-left: -200px;
+    background-color: palevioletred;
+    
+}
+button:nth-child(2){
+    margin-right: -200px;
+    background-color: blue;
+}
+/* Extra larg */
+@media(min-width:1200px){
+
+}
+ /* Large devices (desktops, 992px and up) */
+@media(min-width:992px) and (max-width:1199.98px){
+
+}
+
+
+/* Medium device */
+@media(min-width: 768px) and (max-width:991.98px){
+
+}
+/*small device*/
+@media(min-width:576px) and (max-width:767.98px){
+}
+
+/*Extra small device  */
+@media(max-width:575px){
+
+
+}
+     </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="question">
+            Will You Be my Girlfriend?🥹❤️
+        </h2>
+        <img class="gif" src="https://i.pinimg.com/originals/88/c5/3b/88c53b91666a7fd8ac13e6de5b6bf1b1.gif" alt="">
+    </div>
+    <div class="btn-group">
+        <button class="yes-btn">Yes</button>
+        <button class="no-btn">No</button>
+    </div>
+</body>
+<script>
+const question=document.querySelector(".question");
+const gif=document.querySelector(".gif");
+const yesBtn=document.querySelector(".yes-btn");
+const noBtn=document.querySelector(".no-btn");
+yesBtn.addEventListener("click",function(){
+    question.innerHTML="Yeayyy I Love You🙈❤️";
+    gif.src="https://media.tenor.com/rLsTS3eQiyoAAAAi/tonton-friends-tobi.gif";
+    noBtn.style.display="none";
+    yesBtn.style.marginLeft="30px"
+})
+noBtn.addEventListener("mouseover",()=>{
+    const noBtnRect= noBtn.getBoundingClientRect();
+    const maxX=window.innerWidth - noBtnRect.width;
+    const maxY=window.innerHeight - noBtnRect.height;
+    const rendomX=Math.floor(Math.random() * maxX);
+    const rendomY=Math.floor(Math.random() * maxY);
+    noBtn.style.left=rendomX + "px";
+    noBtn.style.top=rendomY + "px";
+})
+
+
+
+</script>
+</html>
